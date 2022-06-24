@@ -1,0 +1,16 @@
+<fieldset style="width: 250px;">
+    <legend>Search</legend>
+    <table style="width: 250px;">
+        <tr>
+            <td style="width: 150px; margin: auto;">
+                <input type="text" placeholder="Search..." [(ngModel)]="textToSearch" (ngModelChange)="onTextToSearchChange()"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 10px; margin: auto;">
+                <input #inputInStock type="checkbox" [(ngModel)]="isInStock" (change)="onChecked(inputInStock.checked)" checked>
+                <app-label content="Only show products in stock"></app-label>
+            </td>
+        </tr>
+    </table>
+</fieldset>

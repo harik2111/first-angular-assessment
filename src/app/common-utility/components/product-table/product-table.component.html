@@ -1,0 +1,16 @@
+<div>
+    <table *ngFor="let item of filteredItems | keyvalue">
+        <thead>
+            <tr>
+                <th>{{item.key}}</th>
+              </tr>
+              <tr><th>Name</th>
+                <th>Price</th>
+              </tr>
+        </thead>
+        <tr *ngFor="let i of item.value">
+            <td data-title="'Name'">{{i.name}}</td>
+            <td data-title="'Price'">{{i.price}}</td>
+            </tr>
+    </table>
+</div>
