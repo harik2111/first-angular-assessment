@@ -8,7 +8,7 @@
                 <th>Price</th>
               </tr>
         </thead>
-        <tr *ngFor="let i of item.value">
+        <tr *ngFor="let i of item.value" out-Stock [isInStock]="i.inStock">
             <td data-title="'Name'">{{i.name}}</td>
             <td data-title="'Price'">{{i.price}}</td>
             </tr>

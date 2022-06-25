@@ -37,11 +37,11 @@ ngOnChanges():void{
 
       if(this.filteredItems.has(item.category))
       {
-        this.filteredItems.get(item.category)?.push(new ItemModel(item.name, item.price));
+        this.filteredItems.get(item.category)?.push(new ItemModel(item.name, item.price, item.stocked));
       }
       else
       {
-        this.filteredItems.set(item.category, [new ItemModel(item.name, item.price)]);
+        this.filteredItems.set(item.category, [new ItemModel(item.name, item.price, item.stocked)]);
       }
   });
 }
